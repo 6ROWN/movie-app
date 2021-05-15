@@ -1,0 +1,479 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/42658a6db6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <!--Chart Resources -->
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/material.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+</head>
+
+<body id="dashboard">
+    <header>
+        <nav class="nav">
+            <div class="container-lg">
+                <div class="nav-menus">
+                    <div class="logo">
+                        LOGO
+                    </div>
+                    <div class="search-box">
+                        <a href="#"><i class="fas fa-search"> </i></a>
+                        <input type="search" class="search-text" placeholder="Type to search" > 
+                    </div>
+                    <div class="nav-items">
+                        <li><a href="#"> <i class="far fa-bell"></i></a></li>
+                        <li><a href="#"> <i class="far fa-envelope"></i></a></li>
+                        <li><a href="#"> <i class="far fa-user"></i></a></li>
+                    </div>
+                </div>
+            </div>
+            
+        </nav>
+    </header>
+
+    <!--sidebar-->
+    <section class="board container-fluid">
+        <div class="row">
+            <div class="col-md-3 d-none d-md-block sidebar">
+                <ul class="users">
+                    <li><a href="#"><i class="fas fa-store-alt"></i> Seller Dashboard</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#"><i class="fas fa-file-alt"></i> Orders</a></li>
+                    <li><a href="#"><i class="fas fa-shopping-cart"></i> Products</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Customers</a></li>
+                    <li><a href="#"><i class="fas fa-sticky-note"></i> Report</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#"><i class="fas fa-chevron-left"></i> Back</a></li>
+                </ul>
+            </div>
+            
+            <!--board content-->
+            <div class="col-md-9 board-content">
+                <div class="container-lg">
+                    <div class="row">
+                        <div class="title">
+                            <h2 class="fs-5 fw-bold pt-4">Dashboard</h2>
+                            <small>Home <i class="fas fa-chevron-right"></i> Seller Dashboard</small>
+                        </div>
+                    </div>
+    
+                    <div class="row py-3">
+                        <div class="col-6 col-md-4 my-2">
+                            <div class="card rounded-3">
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <small class="fw-bold">Revenue</small>
+                                        <span class="badge bg-secondary p-2 bg-success float-end">This week</span></h1>
+                                    </div>
+                                    <div class="card-text fs-3 fw-bolder"><i class="fas fa-dollar-sign text-success"></i> 5000</div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">70%</div>
+                                      </div>
+                                </div>   
+                            </div>
+                        </div>
+                        <div class=" col-6 col-md-4 my-2">
+                            <div class="card rounded-3">
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <small class="fw-bold">Orders</small>
+                                        <span class="badge bg-secondary p-2 bg-warning float-end">This week</span></h1>
+                                    </div>
+                                    <div class="card-text fs-3 fw-bolder"> <i class="fas fa-file-alt text-warning"></i> 1150</div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">80%</div>
+                                      </div>
+                                </div>   
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 my-2">
+                            <div class="card rounded-3">
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <small class="fw-bold">Customers</small>
+                                        <span class="badge bg-secondary p-2 bg-danger float-end">This month</span></h1>
+                                    </div>
+                                    <div class="card-text fs-3 fw-bolder"><i class="fas fa-users text-danger"></i>  2500</div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">60%</div>
+                                      </div>
+                                </div>   
+                            </div>
+                        </div>            
+                    </div>
+
+                    <div class="py-">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-title pt-3 px-4">
+                                    <small class="fw-bold">Add book to Store </small>
+                                    <small class="float-end"> <a href="" class="text-muted"><i class="fas fa-ellipsis-v"></i></a></small>
+                                    <hr>
+                                </div>
+                                <div class="card-title">
+                                    <form class="container">
+                                        <div>
+                                            <label for="" class="form-label d-inline">Book Title</label>
+                                            <input type="text" class="form-control d-inline" id="">
+                                        </div>
+                                        <div>
+                                            <label for="" class="form-label d-inline">Author</label>
+                                            <input type="text" class="form-control d-inline" id="">
+                                        </div>
+                                        <div>
+                                            <label for="" class="form-label d-inline">Year</label>
+                                            <input type="text" class="form-control d-inline" id="">
+                                        </div>
+                                        <div>
+                                            <label for="" class="form-label d-inline">Format</label>
+                                            <select class="form-select" id="state" required>
+                                                <option value="">Choose...</option>
+                                                <option>HardCover</option>
+                                                <option>Paperback</option>
+                                                <option>Ebook (EPUB)</option>
+                                                <option>Audiobook</option>
+                                                <option>Kindle</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label for="" class="form-label d-inline">Price</label>
+                                            <input type="text" class="form-control d-inline" id="">
+                                        </div>
+                                        <div>
+                                            <label for="formFile" class="form-label">Book Cover </label>
+                                            <input class="form-control" type="file" id="formFile">
+                                          </div>
+                                        <button class="btn btn-primary float-end"> Add Book</button>
+                                    </form>
+                                    
+    
+                                </div>
+                            </div>
+                            
+
+                        </div>
+
+                    </div>
+
+                    <div class="row py-4">
+                        <div class="col col-lg-5 pb-3">
+                            <div class="card">
+                                <div class="card-title py-3 px-4">
+                                    <small class="fw-bold">Payment History</small>
+                                    <small class="float-end"> <a href="" class="text-muted"><i class="fas fa-ellipsis-v"></i></a></small>
+                                    <hr>
+                                </div>
+                                <div class="card-text">
+                                    <li class="payment-items">
+                                        <div class="logo">
+                                            <i class="fab fa-paypal fa-2x text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <h2>Deposit Paypal</h2>
+                                            <small>24th July, 2019</small>
+                                        </div>
+                                        <div>
+                                            <h2>+2000</h2>
+                                            <small>Eur</small>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="card-text">
+                                    <li class="payment-items">
+                                        <div class="logo">
+                                            <i class="fas fa-credit-card fa-2x text-warning"></i> 
+                                        </div>
+                                        <div>
+                                            <h2>Deposit Card</h2>
+                                            <small>24th July, 2019</small>
+                                        </div>
+                                        <div>
+                                            <h2>+2000</h2>
+                                            <small>Eur</small>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="card-text">
+                                    <li class="payment-items">
+                                        <div class="logo">
+                                            <i class="fas fa-university fa-2x text-info"></i>
+                                        </div>
+                                        <div>
+                                            <h2>Deposit Bank</h2>
+                                            <small>24th July, 2019</small>
+                                        </div>
+                                        <div>
+                                            <h2>+2000</h2>
+                                            <small>Eur</small>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="card-text">
+                                    <li class="payment-items">
+                                        <div class="logo">
+                                            <i class="fas fa-window-close fa-2x text-danger"></i>
+                                        </div>
+                                        <div>
+                                            <h2>Cancelled</h2>
+                                            <small>24th July, 2019</small>
+                                        </div>
+                                        <div>
+                                            <h2>+2000</h2>
+                                            <small>Eur</small>
+                                        </div>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-7">
+                            <div class="card">
+                                <div class="card-title py-3 px-4">
+                                    <small class="fw-bold">Product Chart</small>
+                                    <small class="float-end"> <a href="" class="text-muted"><i class="fas fa-ellipsis-v"></i></a></small>
+                                    <hr>
+                                </div>
+                                <div class="card-text">
+                                    <div id="chartdiv">
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col  mb-4">
+                            <div class="card">
+                                <div class="card-title pt-3 px-4">
+                                    <small class="fw-bold">Orders</small>
+                                    <small class="float-end"> <a href="" class="text-muted"><i class="fas fa-ellipsis-v"></i></a></small>
+                                </div>
+                                <div class="card-text table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Product</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Contact</th>
+                                            <th scope="col">Delivery Date</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>James Bond</td>
+                                            <td>Becoming</td>
+                                            <td class="text-warning">Pending</td>
+                                            <td >+233554943202</td>
+                                            <td>12 May 2020</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Jacob Hills</td>
+                                            <td>48 laws of power</td>
+                                            <td class="text-danger">Cancelled</td>
+                                            <td >+233554943202</td>
+                                            <td>12 May 2020</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Larry Bird</td>
+                                            <td>Unf#ck yourself</td>
+                                            <td class="text-success">Recieved</td>
+                                            <td >+233554943202</td>
+                                            <td>12 May 2020</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Lebron James</td>
+                                            <td>Do better</td>
+                                            <td class="text-success">Cancelled</td>
+                                            <td >+233554943202</td>
+                                            <td>Null</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Stephen Curry</td>
+                                            <td>Unf#ck yourself</td>
+                                            <td class="text-success">Recieved</td>
+                                            <td >+233554943202</td>
+                                            <td>12 May 2020</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Jordan Belfort</td>
+                                            <td>Hustle Hard</td>
+                                            <td class="text-success">Pending</td>
+                                            <td >+233554943202</td>
+                                            <td>Null</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+
+                    <div class="row my-4">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-title pt-3 px-4">
+                                    <small class="fw-bold">Books on Sale</small>
+                                    <small class="float-end"> <a href="" class="text-muted"><i class="fas fa-ellipsis-v"></i></a></small>
+                                </div>
+                                <div class="card-text table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Product Name</th>
+                                            <th scope="col">Author</th>
+                                            <th scope="col" >Year</th>
+                                            <th scope="col" >Available In</th>
+                                            <th scope="col">Price</th>
+                                            <th scope="col">Edit</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Becoming</td>
+                                            <td>Michelle Obama</td>
+                                            <td >2019</td>
+                                            <td >HardCover</td>
+                                            <td>$8.89</td>
+                                            <td><a href="#!"> Edit</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>48 Laws of Power</td>
+                                            <td>Robert Greene</td>
+                                            <td >2015</td>
+                                            <td >HardCover</td>
+                                            <td>$11.59</td>
+                                            <td><a href="#!">Edit</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Mastery</td>
+                                            <td>Robert Greene</td>
+                                            <td >2017</td>
+                                            <td >Ebook</td>
+                                            <td>$6.99</td>
+                                            <td><a href="#!">Edit</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>The Alchemist</td>
+                                            <td>Paulo Coelho</td>
+                                            <td >2019</td>
+                                            <td >HardCover</td>
+                                            <td>$8.89</td>
+                                            <td><a href="#!">Edit</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>Last Black Unicorn</td>
+                                            <td>Tifanny Haddish</td>
+                                            <td >2016</td>
+                                            <td >Ebook</td>
+                                            <td>$4.99</td>
+                                            <td><a href="#!">Edit</a></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td>4 Agreement</td>
+                                            <td>Don Miguel</td>
+                                            <td >2016</td>
+                                            <td >HardCover</td>
+                                            <td>$11.99</td>
+                                            <td><a href="#!">Edit</a></td>
+                                        </tr>    
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>     
+    </section>
+    <footer class="bg-light">
+        <div class="container-lg">
+            <p class="text-muted text-center py-3">
+                <small>
+                    &copy; 2021 All rights reserved | Created by Daniel Gohoho
+                </small>   
+            </p>
+        </div>    
+    </footer>
+
+    <!--bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>  
+
+    <script>
+        am4core.ready(function() {
+        
+        // Themes begin
+        am4core.useTheme(am4themes_material);
+        am4core.useTheme(am4themes_animated);
+        // Themes end
+        
+        var chart = am4core.create("chartdiv", am4charts.PieChart3D);
+        chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+        
+        chart.legend = new am4charts.Legend();
+        
+        chart.data = [
+          {
+            purchases: "Ebook",
+            quantities: 78
+          },
+          {
+            purchases: "HardCover",
+            quantities: 116
+          },
+          {
+            purchases: "Kindle",
+            quantities: 23
+          },
+          {
+            purchases: "Audiobooks",
+            quantities: 59
+          },
+          
+        ];
+        
+        var series = chart.series.push(new am4charts.PieSeries3D());
+        series.dataFields.value = "quantities";
+        series.dataFields.category = "purchases";
+        
+        }); // end am4core.ready()
+    </script>
+        
+    
+    
+        
+
+    
+    
+      
+    
+</body>
+</html>

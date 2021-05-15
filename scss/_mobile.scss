@@ -1,0 +1,94 @@
+//wide screen
+@include mediaXl{
+    .left{
+        flex: 4;
+    }
+
+    .right{
+        flex: 6 ;
+    }
+        
+
+}
+
+//laptop or large screen
+@include mediaLg{
+    #home-page .book-card{
+        width: 200px;
+        height: 350px;
+    }
+
+    
+
+    
+
+
+
+}
+
+//meduim screen or tablets
+@include mediaMd{
+    #login-page .right{
+        display: none;
+    }
+
+    #sign-up .left{
+        display: none;
+    }
+    #home-page {
+
+        .book-card{
+            width: 200px;
+        }
+
+        .books{
+            .book-card{
+                height: 370px;
+            }
+        }   
+    }
+
+}
+
+
+//small screen or smartphone
+@include mediaSm{
+    #home-page 
+        .nav{
+            .right-menu{
+                li:last-child{
+                    display: none;
+                } 
+                
+            }
+        }
+
+        .book-card{
+            width: 100%;
+            min-width: 300px;
+            
+
+        }
+    
+    #dashboard{
+        .nav{
+            .search-box{
+                display: none;
+            }
+        }
+        table{
+            .hide{
+                display: none
+            }
+        }
+    }
+
+    .profile-page{
+        .card-body{
+            p{
+                font-size: 15px;  
+            }
+        }
+    }
+}
+

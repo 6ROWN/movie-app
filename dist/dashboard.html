@@ -1,0 +1,455 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/42658a6db6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Chart Resources -->
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+</head>
+
+<body id="dashboard">
+    <header>
+        <nav class="nav">
+            <div class="container-lg">
+                <div class="nav-menus">
+                    <div class="logo">
+                        LOGO
+                    </div>
+                    <div class="search-box">
+                        <a href="#"><i class="fas fa-search"> </i></a>
+                        <input type="search" class="search-text" placeholder="Type to search" > 
+                    </div>
+                    <div class="nav-items">
+                        <li><a href="#"> <i class="far fa-bell"></i></a></li>
+                        <li><a href="#"> <i class="far fa-envelope"></i></a></li>
+                        <li><a href="edit_profile.html"> <i class="far fa-user"></i></a></li>
+                    </div>
+                </div>
+            </div>
+            
+        </nav>
+    </header>
+
+    <!--sidebar-->
+    <section class="board container-fluid">
+        <div class="row">
+            <div class="col-md-3 d-none d-md-block sidebar">
+                <ul class="users">
+                    <li class="fw-bold"><a href="dashboard.html"><i class="fas fa-home"></i> Admin Dashboard</a></li>
+                    <li><a href="seller.html"><i class="fas fa-store-alt"></i> Seller Dashboard</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#orders"><i class="fas fa-file-alt"></i> Orders</a></li>
+                    <li><a href="#orders"><i class="fas fa-shopping-cart"></i> Products</a></li>
+                    <li><a href="#customers"><i class="fas fa-users"></i> Customers</a></li>
+                    <li><a href="#"><i class="fas fa-sticky-note"></i> Report</a></li>
+                </ul>
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-chevron-left"></i> Back</a></li>
+                </ul>
+            </div>
+            
+            <!--board content-->
+            <div class="col-md-9 board-content">
+                <div class="container-lg">
+                    <div class="row">
+                        <div class="title">
+                            <h2 class="fs-5 fw-bold pt-4">Dashboard</h2>
+                            <small>Home <i class="fas fa-chevron-right"></i> Dashboard</small>
+                        </div>
+                    </div>
+    
+                    <div class="row py-3">
+                        <div class="col-6 col-md-4 my-2">
+                            <div class="card rounded-3">
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <small class="fw-bold">Revenue</small>
+                                        <span class="badge bg-secondary p-2 bg-success float-end">This week</span></h1>
+                                    </div>
+                                    <div class="card-text fs-3 fw-bolder"><i class="fas fa-dollar-sign text-success"></i> 5000</div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">70%</div>
+                                      </div>
+                                </div>   
+                            </div>
+                        </div>
+                        <div class=" col-6 col-md-4 my-2">
+                            <div class="card rounded-3">
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <small class="fw-bold">Orders</small>
+                                        <span class="badge bg-secondary p-2 bg-warning float-end">This week</span></h1>
+                                    </div>
+                                    <div class="card-text fs-3 fw-bolder"> <i class="fas fa-file-alt text-warning"></i> 1150</div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">80%</div>
+                                      </div>
+                                </div>   
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 my-2">
+                            <div class="card rounded-3">
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <small class="fw-bold" >Customers</small>
+                                        <span class="badge bg-secondary p-2 bg-danger float-end">This month</span></h1>
+                                    </div>
+                                    <div class="card-text fs-3 fw-bolder"><i class="fas fa-users text-danger"></i>  2500</div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">60%</div>
+                                      </div>
+                                </div>   
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 my-2">
+                            <div class="card rounded-3">
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <small class="fw-bold">New Users</small>
+                                        <span class="badge p-2 bg-primary float-end">This week</span></h1>
+                                    </div>
+                                    <div class="card-text fs-3 fw-bolder"><i class="fas fa-user-friends text-primary"></i> 100</div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">40%</div>
+                                      </div>
+                                </div>   
+                            </div>
+                        </div>
+                        <div class=" col-6 col-md-4 my-2">
+                            <div class="card rounded-3">
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <small class="fw-bold">Most Watched</small>
+                                        <span class="badge bg-info p-2 bg-success float-end">This week</span></h1>
+                                    </div>
+                                    <div class="card-text fs-3 fw-bolder"> <i class="fas fa-video text-info"></i> 5000 <small class="fs-6 text-muted">views</small></div>
+                                    <div class="progress">
+                                        <div class="progress-bar-striped bg-info text-center text-light" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Narcos</div>
+                                      </div>
+                                </div>   
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-4 my-2 ">
+                            <div class="card rounded-3">
+                                <div class="card-body">
+                                    <div class="card-title">
+                                        <small class="fw-bold">Most Purchased</small>
+                                        <span class="badge bg-warning float-end">This week</span></h1>
+                                    </div>
+                                    <div class="card-text fs-3 fw-bolder"><i class="fas fa-book text-warning"></i> 300 <small class="fs-6 text-muted">Becoming</small> </div>
+                                    <div class="progress">
+                                        <div class="progress-bar-striped bg-warning text-center text-light" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Michelle Obama</div>
+                                      </div>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row py-4">
+                        <div class="col-12 col-lg-7 mb-4">
+                            <div class="card">
+                                <div class="pt-3 px-4">
+                                    <small class="fw-bold">Payment History</small>
+                                    <small class="float-end"> <a href="" class="text-muted"><i class="fas fa-ellipsis-v"></i></a></small>
+                                    <hr>
+                                </div>
+                                <div id="chartdiv"></div>
+                            </div>
+                        </div>
+                        <div class="col col-lg-5">
+                            <div class="card">
+                                <div class="card-title py-3 px-4">
+                                    <small class="fw-bold">Payment History</small>
+                                    <small class="float-end"> <a href="" class="text-muted"><i class="fas fa-ellipsis-v"></i></a></small>
+                                    <hr>
+                                </div>
+                                <div class="card-text">
+                                    <li class="payment-items">
+                                        <div class="logo">
+                                            <i class="fab fa-paypal fa-2x text-primary"></i>
+                                        </div>
+                                        <div>
+                                            <h2>Deposit Paypal</h2>
+                                            <small>24th July, 2019</small>
+                                        </div>
+                                        <div>
+                                            <h2>+2000</h2>
+                                            <small>Eur</small>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="card-text">
+                                    <li class="payment-items">
+                                        <div class="logo">
+                                            <i class="fas fa-credit-card fa-2x text-warning"></i> 
+                                        </div>
+                                        <div>
+                                            <h2>Deposit Card</h2>
+                                            <small>24th July, 2019</small>
+                                        </div>
+                                        <div>
+                                            <h2>+2000</h2>
+                                            <small>Eur</small>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="card-text">
+                                    <li class="payment-items">
+                                        <div class="logo">
+                                            <i class="fas fa-university fa-2x text-info"></i>
+                                        </div>
+                                        <div>
+                                            <h2>Deposit Bank</h2>
+                                            <small>24th July, 2019</small>
+                                        </div>
+                                        <div>
+                                            <h2>+2000</h2>
+                                            <small>Eur</small>
+                                        </div>
+                                    </li>
+                                </div>
+                                <div class="card-text">
+                                    <li class="payment-items">
+                                        <div class="logo">
+                                            <i class="fas fa-window-close fa-2x text-danger"></i>
+                                        </div>
+                                        <div>
+                                            <h2>Cancelled</h2>
+                                            <small>24th July, 2019</small>
+                                        </div>
+                                        <div>
+                                            <h2>+2000</h2>
+                                            <small>Eur</small>
+                                        </div>
+                                    </li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col col-lg-7 mb-4">
+                            <div class="card">
+                                <div class="card-title pt-3 px-4">
+                                    <small class="fw-bold" id="orders">Orders</small>
+                                    <small class="float-end"> <a href="" class="text-muted"><i class="fas fa-ellipsis-v"></i></a></small>
+                                </div>
+                                <div class="card-text">
+                                    <table class="table table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Product</th>
+                                            <th scope="col">Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>James Bond</td>
+                                            <td>Becoming</td>
+                                            <td class="text-warning">Pending</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Jacob Hills</td>
+                                            <td>48 laws of power</td>
+                                            <td class="text-danger">Cancelled</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Larry Bird</td>
+                                            <td>Unf#ck yourself</td>
+                                            <td class="text-success">Recieved</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Larry Bird</td>
+                                            <td>Unf#ck yourself</td>
+                                            <td class="text-success">Recieved</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-5">
+                            <div class="card">
+                                <div class="card-title pt-3 px-4">
+                                    <small class="fw-bold">Recent Activity</small>
+                                    <small class="float-end"> <a href="" class="text-muted"><i class="fas fa-ellipsis-v"></i></a></small>
+                                    <hr>
+                                </div>
+                                <div class="card-text">
+                                    <li>
+                                        <div><i class="far fa-circle text-danger"></i></div>
+                                        <h2> Account Suspended</h2>
+                                        <small class="text-muted">50 minutes ago</small>
+                                    </li>
+                                    <li>
+                                        <div><i class="far fa-circle text-success"></i></div>
+                                        <h2> Account Enabled</h2>
+                                        <small class="text-muted">15 minutes ago</small>
+                                    </li>
+                                    <li>
+                                        <div><i class="far fa-circle text-warning"></i></div>
+                                        <h2> Cancelled order</h2>
+                                        <small class="text-muted">5 minutes ago</small>
+                                    </li>
+                                    <li>
+                                        <div><i class="far fa-circle text-danger"></i></div>
+                                        <h2> User Deleted</h2>
+                                        <small class="text-muted">1 minutes ago</small>
+                                    </li>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-4">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-title pt-3 px-4">
+                                    <small class="fw-bold" id="customers">Users</small>
+                                    <small class="float-end"> <a href="" class="text-muted"><i class="fas fa-ellipsis-v"></i></a></small>
+                                </div>
+                                <div class="card-text">
+                                    <table class="table table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Firstname</th>
+                                            <th scope="col">Lastname</th>
+                                            <th scope="col">Account Type</th>
+                                            <th scope="col" class="hide">Status</th>
+                                            <th scope="col" class="hide">Created on</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Emmanuel</td>
+                                            <td>Nartey</td>
+                                            <td>Seller</td>
+                                            <td class="hide">Active</td>
+                                            <td class="hide">1st Jan, 2020</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Gabriel</td>
+                                            <td>Coffie</td>
+                                            <td >User</td>
+                                            <td class="hide" >Active</td>
+                                            <td class="hide" >3rd May, 2020</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Michael</td>
+                                            <td>Jordan</td>
+                                            <td > User</td>
+                                            <td class="hide"> Suspended</td>
+                                            <td class="hide" > 21th July, 2020</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>Larry Bird</td>
+                                            <td>Unf#ck yourself</td>
+                                            <td>Recieved</td>
+                                            <td class="hide">Active</td>
+                                            <td class="hide">05th March, 2021</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>Larry Bird</td>
+                                            <td>Unf#ck yourself</td>
+                                            <td>Recieved</td>
+                                            <td class="hide">Active</td>
+                                            <td class="hide">05th March, 2021</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>     
+    </section>
+    <footer class="bg-light">
+        <div class="container-lg">
+            <p class="text-muted text-center py-3">
+                <small>
+                    &copy; 2021 All rights reserved | Created by Daniel Gohoho
+                </small>   
+            </p>
+        </div>    
+    </footer>
+
+    <!--bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>  
+    
+    <!--chart js-->
+    <script>
+        am4core.ready(function() {
+        
+        // Themes begin
+        am4core.useTheme(am4themes_animated);
+        // Themes end
+        
+        var chart = am4core.create("chartdiv", am4charts.XYChart);
+        
+        var data = [];
+        var value = 50;
+        for(var i = 0; i < 300; i++){
+          var date = new Date();
+          date.setHours(0,0,0,0);
+          date.setDate(i);
+          value -= Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);
+          data.push({date:date, value: value});
+        }
+        
+        chart.data = data;
+        
+        // Create axes
+        var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+        dateAxis.renderer.minGridDistance = 60;
+        
+        var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        
+        // Create series
+        var series = chart.series.push(new am4charts.LineSeries());
+        series.dataFields.valueY = "value";
+        series.dataFields.dateX = "date";
+        series.tooltipText = "{value}"
+        
+        series.tooltip.pointerOrientation = "vertical";
+        
+        chart.cursor = new am4charts.XYCursor();
+        chart.cursor.snapToSeries = series;
+        chart.cursor.xAxis = dateAxis;
+        
+        //chart.scrollbarY = new am4core.Scrollbar();
+        chart.scrollbarX = new am4core.Scrollbar();
+        
+        }); // end am4core.ready()
+    </script>
+        
+
+    
+    
+      
+    
+</body>
+</html>

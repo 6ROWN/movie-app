@@ -1,0 +1,75 @@
+//variables
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+$primary-color: white;
+$secondary-color: #003cc0;
+$complimentary-color: #0ed2fe;
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    min-height: 100vh;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    //overflow: hidden;
+    background: #fff;
+    color: #333;
+    min-height: 100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 300;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+//media Queries
+
+@mixin mediaSm{
+    @media screen and (max-width: 500px){
+        @content;
+    }
+}
+
+
+@mixin mediaMd{
+    @media screen and (max-width: 786px){
+        @content;
+    }
+}
+
+@mixin mediaLg{
+    @media screen and (min-width: 769px) and (max-width: 1170px){
+        @content;
+    }
+}
+
+@mixin mediaXl {
+    @media screen and (max-width:1171px){
+        @content;
+    }
+    
+}
+
+//set text to color
+
